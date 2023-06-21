@@ -1,6 +1,4 @@
 import random
-import sys
-import subprocess
 
 playerDmgRes = [0]
 
