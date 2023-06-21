@@ -39,17 +39,17 @@ enemies_atk = {
 }
 
 enemies_res = {
-    'Slimes': {'st': 15, 'sl': 0, 'sp': 20},
-    'Goblins': {'st': 10, 'sl': 15, 'sp': 0},
+    'Slimes': {'st': 70, 'sl': 0, 'sp': 40},
+    'Goblins': {'st': 10, 'sl': 15, 'sp': 40},
     'Skeleton': {'st': 100, 'sl': 25, 'sp': 0},
     'Zombie': {'st': 100, 'sl': 15, 'sp': 0},
     'Dragon': {'st': 80, 'sl': 80, 'sp': 50},
-    'Troll': {'st': 50, 'sl': 60, 'sp': 25},
-    'Giant': {'st': 60, 'sl': 70, 'sp': 25},
+    'Troll': {'st': 50, 'sl': 60, 'sp': 35},
+    'Giant': {'st': 60, 'sl': 70, 'sp': 35},
     'Vampire': {'st': 3, 'sl': 40, 'sp': 35},
     'Ghost': {'st': 90, 'sl': 100, 'sp': 0},
-    'Wolves': {'st': 5, 'sl': 5, 'sp': 20},
-    'Zombies': {'st': 100, 'sl': 10, 'sp': 20},
+    'Wolves': {'st': 5, 'sl': 5, 'sp': 40},
+    'Zombies': {'st': 100, 'sl': 10, 'sp': 40},
 }
 
 
