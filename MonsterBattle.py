@@ -46,7 +46,7 @@ enemies_res = {
     'Dragon': {'st': 80, 'sl': 80, 'sp': 50},
     'Troll': {'st': 50, 'sl': 60, 'sp': 25},
     'Giant': {'st': 60, 'sl': 70, 'sp': 25},
-    'Vampire': {'st': 3, 'sl': 30, 'sp': 20},
+    'Vampire': {'st': 3, 'sl': 40, 'sp': 35},
     'Ghost': {'st': 90, 'sl': 100, 'sp': 0},
     'Wolves': {'st': 5, 'sl': 5, 'sp': 20},
     'Zombies': {'st': 100, 'sl': 10, 'sp': 20},
