@@ -107,11 +107,9 @@ def healthCheck(who, health):
     if health > 750:
         print(f'{who} looking a ok!\n')
     elif 750 >= health > 500:
-        print(f'{who} looking like this fight is starting to wear on you!\n')
+        print(f'{who} a little worse for wear!\n')
     elif 500 >= health > 250:
         print(f'{who} starting to get a bit injured!\n')
-    elif 250 >= health > 80:
-        print(f'This fights about to be over and {who} about to die!\n')
     elif 250 >= health > 80:
         print(f'This fights about to be over and {who} about to die!\n')
     elif 80 >= health > 0:
