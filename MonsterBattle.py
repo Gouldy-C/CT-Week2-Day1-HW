@@ -1,4 +1,6 @@
-import random, sys, subprocess
+import random
+import sys
+import subprocess
 
 playerDmgRes = [0]
 
@@ -17,9 +19,9 @@ enemies = [
 ]
 
 player_atk = {
-    'st': [20, 200],
-    'sl': [30, 160],
-    'sp': [50, 80],
+    'st': [50, 225],
+    'sl': [60, 200],
+    'sp': [40, 120],
 }
 
 enemies_atk = {
@@ -52,7 +54,8 @@ enemies_res = {
 
 
 def main():
-    print(f'This is a monster fighting game. Player Damage Resistance = {playerDmgRes[0]} percent, to get this stat up you must play and win.')
+    print(
+        f'This is a monster fighting game. Player Damage Resistance = {playerDmgRes[0]} percent, to get this stat up you must play and win.')
     while True:
         play = input('Would you like to play? [y/n] ').lower()
         if play == 'y':
@@ -62,12 +65,8 @@ def main():
             exit()
         else:
             print('Please try again. We wil only accept y for yes and n for no.')
-    
+
     game()
-
-
-
-
 
 
 def game():
@@ -77,23 +76,24 @@ def game():
     print(f'You are fighting a {enemy}!\n')
     while playerHealth >= 1 and enemyHealth >= 1:
         while True:
-            atkType = input('\nPlease enter if you would like to stab [st], slash [sl] or cast a spell [sp]: [st/sl/sp] ').lower()
+            atkType = input(
+                '\nPlease enter if you would like to stab [st], slash [sl] or cast a spell [sp]: [st/sl/sp] ').lower()
             if atkType in ['st', 'sl', 'sp']:
                 print('\n')
                 break
             else:
                 print('Please enter a valid input.')
-        
+
         playerRoundDmg = playerDmgToEnemy(enemy, atkType)
         enemyHealth -= playerRoundDmg
         print(f'You did {playerRoundDmg} damage to the {enemy}!')
-        
+
         healthCheck('Its', enemyHealth)
-        
+
         enemyRoundDmg = enemyAttack(enemy)
         playerHealth -= enemyRoundDmg
         print(f'The {enemy} did {enemyRoundDmg} damage to the You!')
-        
+
         healthCheck("You're", playerHealth)
 
     if playerHealth <= 0:
@@ -117,6 +117,7 @@ def healthCheck(who, health):
         print(f'This fights about to be over and {who} about to die!\n')
     elif 80 >= health > 0:
         print(f'{who} going to die!\n')
+
 
 def enemyAttack(enemy):
     atk_values = enemies_atk[enemy]
