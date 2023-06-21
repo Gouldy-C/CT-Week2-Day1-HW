@@ -4,6 +4,8 @@ import time
 
 playerDmgRes = [0]
 
+healthValue = 800
+
 enemies = [
     'Slimes',
     'Goblins',
@@ -70,8 +72,8 @@ def main():
 
 
 def game():
-    playerHealth = 1000
-    enemyHealth = 1000
+    playerHealth = healthValue
+    enemyHealth = healthValue
     enemy = enemies[random.randrange(0, len(enemies))]
     print(f'You are fighting a {enemy}!\n')
     while playerHealth >= 1 and enemyHealth >= 1:
@@ -109,11 +111,11 @@ def game():
 
 
 def healthCheck(who, health):
-    if health > 750:
+    if health > 650:
         print(f'{who} looking a ok!\n\n')
-    elif 750 >= health > 500:
+    elif 650 >= health > 450:
         print(f'{who} a little worse for wear!\n\n')
-    elif 500 >= health > 250:
+    elif 450 >= health > 250:
         print(f'{who} starting to get a bit injured!\n\n')
     elif 250 >= health > 80:
         print(f'This fights about to be over and {who} about to die\n\n')
