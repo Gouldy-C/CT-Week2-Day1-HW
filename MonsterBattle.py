@@ -21,7 +21,7 @@ enemies = [
 player_atk = {
     'st': [50, 225],
     'sl': [60, 200],
-    'sp': [40, 120],
+    'sp': [25, 150],
 }
 
 enemies_atk = {
@@ -55,7 +55,7 @@ enemies_res = {
 
 def main():
     print(
-        f'This is a monster fighting game. Player Damage Resistance = {playerDmgRes[0]} percent, to get this stat up you must play and win.')
+        f'\nThis is a monster fighting game. Player Damage Resistance = {playerDmgRes[0]} percent, to get this stat up you must play and win.')
     while True:
         play = input('Would you like to play? [y/n] ').lower()
         if play == 'y':
@@ -97,11 +97,12 @@ def game():
         healthCheck("You're", playerHealth)
 
     if playerHealth <= 0:
-        print('Sorry but you died!')
-    elif enemyHealth <= 0:
-        print('Wow, You won! I am totally impressed! I have give you 10 percent damage resistance if you want to play again.')
+        print('Sorry but you died!\n')
+        main()
+    if enemyHealth <= 0:
+        print('Wow, You won! I am totally impressed! I have give you 10 percent damage resistance if you want to play again.\n')
         playerDmgRes[0] = playerDmgRes[0] + 10
-    main()
+        main()
 
 
 def healthCheck(who, health):
