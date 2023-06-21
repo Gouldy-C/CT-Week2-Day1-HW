@@ -67,7 +67,7 @@ def main():
         elif play == 'n':
             exit()
         else:
-            print('Please try again. We wil only accept y for yes and n for no.')
+            print('\nPlease try again. We will only accept y for yes and n for no.\n')
     game()
 
 
