@@ -55,7 +55,7 @@ enemies_res = {
 
 def main():
     print(
-        f'\nThis is a monster fighting game. Player Damage Resistance = {playerDmgRes[0]} percent, to get this stat up you must play and win.')
+        f'\nThis is a monster fighting game. Player Damage Resistance = {playerDmgRes[0]} percent, to get this stat up you must play and win.\n')
     while True:
         play = input('Would you like to play? [y/n] ').lower()
         if play == 'y':
