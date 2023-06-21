@@ -1,4 +1,6 @@
 import random
+import os
+import time
 
 playerDmgRes = [0]
 
@@ -52,6 +54,7 @@ enemies_res = {
 
 
 def main():
+    os.system('cls')
     print(
         f'\nThis is a monster fighting game. Player Damage Resistance = {playerDmgRes[0]} percent, to get this stat up you must play and win.\n')
     while True:
@@ -63,7 +66,6 @@ def main():
             exit()
         else:
             print('Please try again. We wil only accept y for yes and n for no.')
-
     game()
 
 
@@ -95,25 +97,28 @@ def game():
         healthCheck("You're", playerHealth)
 
     if playerHealth <= 0:
-        print('Sorry but you died!\n')
+        print('Sorry but you died!  -Wait 10 sec.\n')
+        playerDmgRes[0] = 0
+        time.sleep(10)
         main()
     if enemyHealth <= 0:
-        print('Wow, You won! I am totally impressed! I have give you 10 percent damage resistance if you want to play again.\n')
+        print('Wow, You won! I am totally impressed! I have given you 10 percent damage resistance if you want to play again.  -Wait 10 sec.\n')
         playerDmgRes[0] = playerDmgRes[0] + 10
+        time.sleep(10)
         main()
 
 
 def healthCheck(who, health):
     if health > 750:
-        print(f'{who} looking a ok!\n')
+        print(f'{who} looking a ok!\n\n')
     elif 750 >= health > 500:
-        print(f'{who} a little worse for wear!\n')
+        print(f'{who} a little worse for wear!\n\n')
     elif 500 >= health > 250:
-        print(f'{who} starting to get a bit injured!\n')
+        print(f'{who} starting to get a bit injured!\n\n')
     elif 250 >= health > 80:
-        print(f'This fights about to be over and {who} about to die!\n')
+        print(f'This fights about to be over and {who} about to die\n\n')
     elif 80 >= health > 0:
-        print(f'{who} going to die!\n')
+        print(f'{who} going to die!\n\n')
 
 
 def enemyAttack(enemy):
